@@ -8,6 +8,13 @@
 .container {
     max-width: 1121px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
 a {
@@ -108,13 +115,14 @@ body {
 }
 
 .slider__inner {
-    max-height: 438px;
+    min-height: 320px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-image: url(../img/slider__fon.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    padding: 49px 673px 56px 92px;
+    background-position: center right;
+    background-size: cover;
+    padding: 49px 45% 56px 92px;
 }
 
 .slider__title {
@@ -152,7 +160,6 @@ body {
 .service__inner {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-height: 375px;
     padding: 40px 43px 72px 53px;
     background-color: #FFF;
     display: -webkit-box;
@@ -215,7 +222,7 @@ body {
     background-color: #fff;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-height: 438px;
+    overflow: hidden;
 }
 
 .recipe__inner:after {
@@ -267,7 +274,7 @@ body {
 
 .recipe__time {
     font-family: 'Open Sans', sans-serif;
-    font-family: 300;
+    font-weight: 300;
     font-size: 16px;
     color: #555555;
     letter-spacing: 0.25px;
@@ -506,7 +513,7 @@ hr {
 
 .author__about {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300px;
+    font-weight: 300;
     font-style: italic;
     font-size: 14px;
     letter-spacing: 0.25px;
@@ -627,12 +634,48 @@ hr {
 }
 
 .services__popular {
-    height: 350px;
+    min-height: 350px;
     width: 290px;
     display: inline-block;
     background-color: #fff;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 25px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.services__popular-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #055555;
+    font-size: 22px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.services__popular-list {
+    display: block;
+    padding-top: 20px;
+}
+
+.services__popular-list li {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.services__popular-list a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.services__popular-list a:hover {
+    color: #911026;
+}
+
+.services {
+    padding-bottom: 80px;
 }
 
 .services__inner {
@@ -643,4 +686,182 @@ hr {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 20px;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #dddddd;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer__text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    color: #555555;
+}
+
+.service__recipe1-text,
+.service__recipe2-text,
+.service__recipe3-text {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.recipe__text p + p,
+.recipe__text p + .recipe__text-title {
+    margin-top: 16px;
+}
+
+@media (max-width: 1100px) {
+    .slider__inner {
+        padding: 40px 35% 40px 40px;
+    }
+
+    .header__content-inner {
+        padding: 30px 40px;
+    }
+
+    .services__inner {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__top {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .header__content-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-height: none;
+        text-align: center;
+    }
+
+    .menu {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .header__menu li {
+        display: inline-block;
+        margin: 4px 8px;
+    }
+
+    .menu li + li {
+        margin-left: 0;
+    }
+
+    .slider__inner {
+        padding: 32px 24px;
+        background-position: center;
+    }
+
+    .service__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 32px 24px 48px;
+    }
+
+    .service__recipe1,
+    .service__recipe2,
+    .service__recipe3 {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .recipe__img {
+        float: none;
+        display: block;
+        margin-right: 0;
+    }
+
+    .recipe__content {
+        padding: 24px;
+    }
+
+    .recipe__title {
+        font-size: 26px;
+    }
+
+    .erorr__author__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .erorr__inner,
+    .author__inner {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+    }
+
+    .erorr__content {
+        padding: 80px 24px 40px;
+    }
+
+    .author__img {
+        float: none;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .services__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__recipe1,
+    .services__recipe2,
+    .services__popular {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .services__recipe1 {
+        height: auto;
+    }
+
+    .services__recipe2 {
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__top {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .header__menu li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .slider__title {
+        font-size: 20px;
+    }
+
+    .recipe__content-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .services__level {
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .services__print:before {
+        padding-left: 0;
+    }
 }
